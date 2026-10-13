@@ -1,0 +1,530 @@
+/* =========================================================
+   AI 영상 제작 강의 — 슬라이드 덱 디자인 시스템
+   참고 PDF(Session) 레이아웃 재현
+   ========================================================= */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
+:root {
+  --bg-light: #ececeb;
+  --bg-grid: rgba(0, 0, 0, 0.035);
+  --bg-dark: #111111;
+  --ink: #1a1a1a;
+  --ink-soft: #3a3a3a;
+  --muted: #8a8a8a;
+  --line: #d8d8d6;
+  --pill-bg: #1a1a1a;
+  --pill-ink: #ffffff;
+  --accent: #1a1a1a;
+  --prompt-bg: #f6f6f4;
+  --prompt-border: #dcdcd8;
+  --table-head: #1f1f1f;
+  --table-stripe: #f4f4f2;
+  --ph-bg: #e3e3e0;
+  --ph-border: #c4c4be;
+
+  /* 슬라이드 기준 크기 (16:9) */
+  --slide-w: 1280px;
+  --slide-h: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: #5a5a5a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 인쇄(PDF) 시 배경/그래픽 강제 출력 */
+.slide, .slide * {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- 상단 컨트롤 바 (화면 전용) ---------- */
+.toolbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  color: #fff;
+}
+.toolbar .title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: auto;
+  letter-spacing: -0.01em;
+}
+.toolbar button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.toolbar button:hover { background: rgba(255, 255, 255, 0.24); }
+.toolbar .hint { font-size: 11px; color: rgba(255,255,255,0.55); font-weight: 500; }
+
+/* ---------- 슬라이드 스택 ---------- */
+.deck {
+  padding: 76px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.slide {
+  position: relative;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  max-width: 96vw;
+  background: var(--bg-light);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  /* 미세 세로 그리드 */
+  background-image:
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+  background-size: calc(var(--slide-w) / 6) 100%;
+}
+
+/* 본문 패딩 영역 */
+.slide__pad {
+  position: absolute;
+  inset: 0;
+  padding: 64px 76px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- 러닝 헤더 (session 알약 + 부제) ---------- */
+.runhead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  background: var(--pill-bg);
+  color: var(--pill-ink);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  padding: 9px 22px;
+  border-radius: 999px;
+}
+.runhead .subj {
+  color: var(--ink-soft);
+  font-size: 17px;
+  font-weight: 500;
+}
+.slide__num {
+  position: absolute;
+  right: 30px;
+  bottom: 22px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ---------- 타이틀 슬라이드 (다크) ---------- */
+.slide--title {
+  background-color: var(--bg-dark);
+  background-image: radial-gradient(120% 120% at 30% 30%, #232323 0%, var(--bg-dark) 60%, #060606 100%);
+  background-size: 100% 100%;
+}
+.slide--title .slide__pad {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.slide--title .eyebrow {
+  color: #d8d8d8;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  margin-bottom: 26px;
+}
+.slide--title h1 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.slide--title .quote {
+  margin-top: 38px;
+  max-width: 760px;
+  color: #b9b9b9;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ---------- 섹션 구분 슬라이드 ---------- */
+.slide--section .slide__pad {
+  align-items: flex-start;
+  justify-content: center;
+}
+.slide--section .sec-kicker {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.slide--section h2 {
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 1000px;
+}
+.slide--section .sec-quote {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  max-width: 880px;
+  border-left: 3px solid #cfcfcb;
+  padding-left: 20px;
+}
+
+/* ---------- 본문 헤딩 ---------- */
+.s-title {
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+.s-sub {
+  font-weight: 700;
+  font-size: 23px;
+  color: var(--ink);
+  margin: 18px 0 10px;
+}
+.lead {
+  font-size: 20px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 4px 0 14px;
+  font-weight: 500;
+}
+
+/* 본문 영역 스크롤 없이 채우기 위한 컨텐츠 래퍼 */
+.body { flex: 1; min-height: 0; }
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.cols--6040 { grid-template-columns: 1.4fr 1fr; }
+
+/* ---------- 불릿 ---------- */
+ul.bul {
+  list-style: none;
+  margin: 6px 0;
+  padding: 0;
+}
+ul.bul > li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 9px 0;
+}
+ul.bul > li::before {
+  content: "";
+  position: absolute;
+  left: 2px; top: 12px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #4a4a4a;
+}
+ul.bul strong, .lead strong, p strong { color: var(--ink); font-weight: 700; }
+.small { font-size: 16px; }
+.small > li { font-size: 16px; margin: 6px 0; }
+
+/* ---------- 표 ---------- */
+table.t {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin: 6px 0;
+  background: #fff;
+}
+table.t th {
+  background: var(--table-head);
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  padding: 11px 14px;
+  font-size: 15px;
+}
+table.t td {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 14px;
+  color: var(--ink-soft);
+  vertical-align: top;
+  line-height: 1.4;
+}
+table.t tr:nth-child(even) td { background: var(--table-stripe); }
+table.t td strong { color: var(--ink); }
+table.t.compact { font-size: 14px; }
+table.t.compact th, table.t.compact td { padding: 7px 11px; }
+
+/* ---------- 프롬프트 박스 ---------- */
+.prompt {
+  background: var(--prompt-bg);
+  border: 1px solid var(--prompt-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 10px 0;
+}
+.prompt .ptag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: #2a2a2a;
+  border-radius: 6px;
+  padding: 3px 9px;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.prompt .ptag.neg { background: #8a3a3a; }
+.prompt p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #2c2c2c;
+  font-weight: 500;
+}
+.prompt p.kor { font-family: "Pretendard", sans-serif; }
+
+/* 콜아웃 */
+.callout {
+  background: #fff6e6;
+  border: 1px solid #f0d79a;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #7a5a18;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+.callout.note { background: #eef3fb; border-color: #c5d6ef; color: #2f4d7a; }
+
+/* 인용 */
+.q {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  border-left: 3px solid #cfcfcb;
+  padding-left: 18px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+/* ---------- 이미지 슬롯 / 플레이스홀더 ---------- */
+.imgslot {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--ph-bg);
+}
+.imgslot.r169 { aspect-ratio: 16 / 9; }
+.imgslot.r43  { aspect-ratio: 4 / 3; }
+.imgslot.r34  { aspect-ratio: 3 / 4; }
+.imgslot.r11  { aspect-ratio: 1 / 1; }
+.imgslot img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.imgslot .ph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 2px dashed var(--ph-border);
+  border-radius: 12px;
+  color: #8c8c86;
+  text-align: center;
+  padding: 14px;
+}
+.imgslot .ph .ic { font-size: 26px; opacity: 0.6; }
+.imgslot .ph .fn {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6c6c66;
+  word-break: break-all;
+}
+.imgslot .ph .spec { font-size: 12px; color: #9a9a94; }
+.cap {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* 체크리스트 */
+ul.check { list-style: none; padding: 0; margin: 6px 0; }
+ul.check > li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 10px 0;
+}
+ul.check > li::before {
+  content: "☐";
+  position: absolute;
+  left: 0; top: -1px;
+  font-size: 19px;
+  color: #6a6a6a;
+}
+
+/* 빈칸(워크시트) */
+.blank {
+  display: inline-block;
+  min-width: 120px;
+  border-bottom: 1.5px solid #b6b6b0;
+  height: 1.1em;
+}
+
+/* 숫자 스텝 */
+.steps { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.step { display: flex; gap: 14px; align-items: flex-start; }
+.step .n {
+  flex: none;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+}
+.step .tx { font-size: 18px; line-height: 1.45; color: var(--ink-soft); padding-top: 3px; }
+.step .tx strong { color: var(--ink); }
+
+/* ---------- 차트 / 비교 시각화 (2강~) ---------- */
+.chart {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.chart svg { width: 100%; height: auto; display: block; }
+.chart .ttl { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+
+/* 감정 곡선 SVG 내부 색 토큰 */
+.curve-axis { stroke: #c9c9c5; stroke-width: 1; }
+.curve-grid { stroke: #ececea; stroke-width: 1; }
+.curve-line { fill: none; stroke: #1a1a1a; stroke-width: 2.5; }
+.curve-area { fill: rgba(26,26,26,0.06); stroke: none; }
+.curve-dot  { fill: #1a1a1a; }
+.curve-lab  { fill: #8a8a86; font-size: 11px; font-family: "Pretendard", sans-serif; }
+.curve-val  { fill: #1a1a1a; font-size: 11px; font-weight: 700; font-family: "Pretendard", sans-serif; }
+
+/* 작은 패턴 미니차트 묶음 */
+.minis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.mini { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 10px; text-align: center; }
+.mini svg { width: 100%; height: 56px; }
+.mini .mt { font-size: 14px; font-weight: 700; margin-top: 6px; }
+.mini .md { font-size: 12px; color: var(--muted); line-height: 1.35; margin-top: 2px; }
+.mini .ml { fill: none; stroke: #1a1a1a; stroke-width: 2.2; }
+
+/* 컷 길이 비교 바 (데모) */
+.cutstrip { display: flex; gap: 4px; align-items: stretch; height: 46px; margin: 6px 0; }
+.cutstrip .seg {
+  background: #2a2a2a; border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 12px; font-weight: 700;
+}
+.cutstrip.varied .seg.hot { background: #8a3a3a; }
+.cutstrip.varied .seg.cool { background: #4a4a4a; }
+.striplab { font-size: 13px; color: var(--muted); font-weight: 600; margin-top: 2px; }
+
+/* ---------- 파이프라인 지도 (러닝 예제 흐름) ---------- */
+.pipe { display: flex; align-items: stretch; gap: 0; margin: 10px 0; }
+.pipe .pstep {
+  flex: 1; background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 12px 10px; text-align: center;
+}
+.pipe .pstep.cur { border: 2px solid var(--ink); }
+.pipe .pstep .pk {
+  font-size: 12px; font-weight: 700; color: #fff; background: var(--ink);
+  border-radius: 999px; padding: 3px 11px; display: inline-block; margin-bottom: 7px;
+}
+.pipe .pstep .pt { font-size: 15px; font-weight: 700; color: var(--ink); }
+.pipe .pstep .pd { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.35; }
+.pipe .parrow { display: flex; align-items: center; padding: 0 5px; color: #b8b8b4; font-size: 17px; font-weight: 800; }
+
+/* 막연→구체 비교 칩 */
+.cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 10px 0; }
+.cmp .bad, .cmp .good {
+  border-radius: 12px; padding: 14px 16px; font-size: 16px; line-height: 1.5;
+}
+.cmp .bad { background: #f7eeee; border: 1px solid #e3c9c9; color: #6e3a3a; }
+.cmp .good { background: #eef4ee; border: 1px solid #c7ddc7; color: #2f5a30; }
+.cmp .lab { font-size: 12px; font-weight: 700; letter-spacing: .02em; display: block; margin-bottom: 5px; }
+
+/* 러닝 예제 강조 박스 */
+.runex {
+  background: linear-gradient(180deg,#fbf3e6 0%, #faf0df 100%);
+  border: 1px solid #efd9b3; border-radius: 12px; padding: 14px 18px; margin: 8px 0;
+}
+.runex .rx { font-size: 12px; font-weight: 700; color: #fff; background: #b9762a; border-radius: 999px; padding: 3px 11px; display: inline-block; margin-bottom: 8px; }
+.runex p { margin: 0; font-size: 17px; line-height: 1.55; color: #5a4321; }
+.runex p.kor { color: #4a3a1a; }
+
+/* 채워진(완성 예시) 표 강조 */
+table.t.filled td { background: #fbf6ee; }
+table.t.filled tr:nth-child(even) td { background: #f6efe2; }
+table.t.filled th { background: #7a5a2a; }
+
+/* ================= 인쇄(PDF) ================= */
+@page { size: 1280px 720px; margin: 0; }
+@media print {
+  html, body { background: #fff; }
+  .toolbar { display: none !important; }
+  .deck { padding: 0; gap: 0; }
+  .slide {
+    box-shadow: none;
+    max-width: none;
+    width: 1280px;
+    height: 720px;
+    page-break-after: always;
+    break-after: page;
+  }
+  .imgslot .ph { border-color: #c4c4be; }
+}

@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>수노 보조자료 — 곡 구조·스타일 사전</title>
+<style>
+:root{--paper:#ececeb;--ink:#1a1a1a;--muted:#686866;--line:#d8d8d6;--accent:#315c66}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}.toolbar{position:sticky;top:0;z-index:5;background:#111;color:#fff;display:flex;gap:14px;align-items:center;justify-content:space-between;padding:13px max(22px,calc((100vw - 1240px)/2));font-size:13px}.toolbar a{color:#ddd}.toolbar button{background:#333;color:#fff;border-color:#555}button{font:inherit;font-size:12px;cursor:pointer;border:1px solid #ccc;background:#fff;border-radius:7px;padding:7px 12px}button:hover{background:#f2f2ef}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #7fa7b2;outline-offset:3px}main{max-width:1240px;padding:0 24px;margin:28px auto 60px}header{background:#111;color:#fff;border-radius:14px;padding:44px 46px;background-image:linear-gradient(110deg,#232323,#111)}.eyebrow{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.03em}header .eyebrow{color:#bcbcbc}h1{font-size:44px;letter-spacing:-.045em;line-height:1.18;margin:14px 0 22px}header p{color:#c6c6c6;max-width:780px}header .stats{font-size:13px;color:#ddd;margin-top:24px}nav{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}nav a{background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:30px;text-decoration:none;font-size:14px}a{color:var(--accent);text-underline-offset:3px}h2{font-size:28px;line-height:1.3;letter-spacing:-.04em;margin:0 0 12px}h3{font-size:21px;line-height:1.35;letter-spacing:-.03em;margin:9px 0}h3 span{display:block;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:0;margin-top:4px}p{margin:9px 0}section{margin-top:28px}.intro-panel,.section-panel{padding:28px 32px;background:#fff;border:1px solid var(--line);border-radius:14px}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.intro-grid strong{display:block}.note{padding:13px 17px;background:#eef3fb;border:1px solid #c5d6ef;border-radius:8px;font-size:14px;margin-top:17px}.note.warm{background:#fff6e6;border-color:#f0d79a}.small{font-size:13px;color:var(--muted)}.pill{display:inline-block;background:#1a1a1a;color:#fff;border-radius:20px;font-size:12px;padding:5px 12px;vertical-align:middle;margin-right:9px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}th{background:#1a1a1a;color:#fff;text-align:left;padding:10px 13px}td{padding:14px 13px;border-bottom:1px solid var(--line);vertical-align:top}tr:nth-child(even){background:#f5f5f3}td:first-child{width:21%}td:nth-child(2){width:37%}td span,td small{display:block}td small{font-size:12px;color:var(--muted);margin-top:7px}code{font:12px/1.6 Menlo,Consolas,monospace;background:#e8e8e4;padding:2px 5px;border-radius:4px}.patterns{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.pattern{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;scroll-margin-top:88px}.pattern>p{font-size:14px}.sequence{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.sequence span{font-size:11px;line-height:1.4;border-radius:5px;background:#e6e6e1;border:1px solid #d4d4ce;padding:5px 7px}.sequence span:not(:last-child)::after{content:' →';color:#777}.tip{color:#565653;font-size:13px!important}.copybox{position:relative;background:#f6f6f3;border:1px solid #dcdcd8;border-radius:8px;padding:40px 15px 14px;margin:12px 0}.copybox button{position:absolute;right:10px;top:8px}.copybox pre{margin:0;white-space:pre-wrap;font:13px/1.65 Menlo,Consolas,"Apple SD Gothic Neo",monospace;overflow-wrap:anywhere;word-break:normal}summary{cursor:pointer;font-size:14px;font-weight:600}details[open]>summary{margin-bottom:12px}.sample{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:center;gap:14px}.controls{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:20px 0}.controls input{width:100%;font:inherit;font-size:15px;padding:11px 13px;border:1px solid #ccc;border-radius:8px}.filters{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.filters button[aria-pressed=true]{background:#1a1a1a;color:#fff;border-color:#1a1a1a}.results{font-size:13px;color:var(--muted);margin-top:12px}.style-list{display:flex;flex-direction:column;gap:16px}.style-card{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:26px 28px;scroll-margin-top:88px}.style-card[hidden]{display:none}.style-main>p{font-size:15px}dl{margin:16px 0;font-size:13px}dl>div{display:flex;gap:10px;margin:6px 0}dt{color:var(--muted);flex:0 0 78px}dd{margin:0}.use{font-size:13px!important}.use strong{color:#315c66}.listen-panel{background:#f2f2ee;border:1px solid #ddddd6;border-radius:9px;padding:17px;align-self:start;min-width:0}.listen-title{font-size:13px;font-weight:700;margin-bottom:13px}.player audio{width:100%;height:42px}.empty{font-size:12px;color:#777;text-align:center;margin:8px 0}.listen-point{font-size:13px;border-top:1px solid #d5d5cf;margin-top:15px;padding-top:13px}.listen-point p{color:#555;font-size:13px}.player iframe{width:100%;height:240px;border:0;border-radius:8px;background:#fff}.track-link{display:block;font-size:12px;margin:9px 0}.load-player{width:100%;padding:12px}.player .hint{font-size:12px;color:#666;margin:8px 0}.no-results{padding:24px;background:#fff;text-align:center;border:1px solid var(--line);border-radius:9px}.edit-example{background:#f5f5f2;padding:15px;white-space:pre-wrap;font:13px/1.7 Menlo,Consolas,monospace;border-radius:8px;overflow-wrap:anywhere}.footer{font-size:12px;color:var(--muted);padding:25px 0}.source-links{display:flex;gap:15px;flex-wrap:wrap;font-size:13px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:760px){main{padding:0 14px}header{padding:28px 25px}h1{font-size:32px}.intro-panel,.section-panel{padding:23px 21px}.intro-grid,.patterns{grid-template-columns:1fr}.style-card{grid-template-columns:1fr;padding:22px;gap:12px}.toolbar{padding:12px 16px}.toolbar a{display:none}.listen-panel{width:100%}.section-head{align-items:flex-start}h2{font-size:24px}td{min-width:160px;padding:10px}.style-card h3 span{display:block}}
+@media print{@page{size:A4;margin:15mm}body{background:white;font-size:11pt}.toolbar,nav,.controls,.copybox button,.load-player{display:none!important}main{padding:0;margin:0;max-width:none}header{padding:25px}h1{font-size:28pt}h2{font-size:18pt}.style-card,.pattern{break-inside:avoid}.style-card{grid-template-columns:1fr 220px;gap:15px;padding:18px}.patterns{gap:10px}.intro-panel,.section-panel{padding:18px}.style-card[hidden]{display:grid!important}.player iframe,.player audio{display:none}.player::before{content:'예시곡: 아래 링크로 듣기';font-size:10pt}.source-links{font-size:9pt}a{color:inherit}h2,h3{break-after:avoid}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<!-- =============================================================
+예시곡을 연결하려면 아래 TRACKS의 해당 스타일 url만 바꾸세요.
+예: "P01": { "name": "청량 팝", "url": "https://suno.com/song/곡의-UUID" }
+지원: https://suno.com/song/UUID, https://suno.com/embed/UUID,
+      직접 재생 가능한 MP3/WAV/OGG/M4A URL 또는 상대 파일 경로.
+/s/ 단축 공유 링크는 곡 페이지 열기만 지원합니다.
+공유 링크를 브라우저에서 연 뒤 긴 /song/ 주소나 Embed src를 넣으세요.
+iframe 코드 전체를 넣지 말고 src 주소만 넣으세요.
+비워두면 “예시곡 연결 전”으로 표시됩니다. 저장 후 브라우저 새로고침.
+============================================================= -->
+<script type="application/json" id="TRACKS">
+{
+  "P01": {
+    "name": "청량 팝",
+    "url": "https://suno.com/song/e2b84440-6da7-47bb-ab37-df324148eb6d"
+  },
+  "P02": {
+    "name": "K-pop 댄스 팝",
+    "url": "https://suno.com/song/975a919e-373e-4167-824f-42f5f04b2f52"
+  },
+  "P03": {
+    "name": "신스팝",
+    "url": "https://suno.com/song/08882133-5809-479f-bf6d-4768f8a024a0"
+  },
+  "P04": {
+    "name": "시티팝",
+    "url": "https://suno.com/song/723e7974-5948-4c17-8a45-ac9c9de35ae0"
+  },
+  "P05": {
+    "name": "디스코 팝",
+    "url": "https://suno.com/song/a086c394-94db-4efb-97d5-f7ea3b233fdf"
+  },
+  "P06": {
+    "name": "드림 팝",
+    "url": "https://suno.com/song/343f084d-503e-4832-a327-b6b04373df39"
+  },
+  "R01": {
+    "name": "인디 록",
+    "url": "https://suno.com/song/0dc6439b-c83c-4782-95bf-9e1f160f897f"
+  },
+  "R02": {
+    "name": "팝 펑크",
+    "url": "https://suno.com/song/e49d8a4e-240e-4383-86f4-4dbd8dea66d1"
+  },
+  "R03": {
+    "name": "록 앤섬",
+    "url": "https://suno.com/song/404a11e9-a7ff-47d7-8999-22b7b191cb5a"
+  },
+  "H01": {
+    "name": "붐뱁 힙합",
+    "url": "https://suno.com/song/cb2cfa78-abf9-4f30-9305-27e3ef766c2f"
+  },
+  "H02": {
+    "name": "트랩 / 팝 랩",
+    "url": "https://suno.com/song/13551215-bb99-4ace-8c8e-2c51a1640bf0"
+  },
+  "H03": {
+    "name": "컨템퍼러리 R&B",
+    "url": "https://suno.com/song/9b13df41-86c1-444b-8076-08f0023962b7"
+  },
+  "H04": {
+    "name": "네오 소울",
+    "url": "https://suno.com/song/084e09ad-57d5-4e4e-bcdf-ebd687252c2b"
+  },
+  "E01": {
+    "name": "하우스 팝",
+    "url": "https://suno.com/song/8af94af6-eec8-4e48-85f9-44e8582c3d80"
+  },
+  "E02": {
+    "name": "EDM 팝",
+    "url": "https://suno.com/song/8c253524-7543-4313-8e1e-5cc1ffe8aeba"
+  },
+  "E03": {
+    "name": "UK 개러지 팝",
+    "url": "https://suno.com/song/f4e743fe-d7eb-4a23-894a-f9a99e8d139b"
+  },
+  "E04": {
+    "name": "드럼 앤 베이스 팝",
+    "url": "https://suno.com/song/621765b1-3fc0-41a1-b633-bce25b0f4cda"
+  },
+  "G01": {
+    "name": "아프로비츠 팝",
+    "url": "https://suno.com/song/5559d500-e7a0-4e25-89a7-8474b10ee299"
+  },
+  "G02": {
+    "name": "아마피아노 팝",
+    "url": "https://suno.com/song/42363aff-c140-4da6-a01d-aed82f988da0"
+  },
+  "G03": {
+    "name": "레게톤 팝",
+    "url": "https://suno.com/song/d264207c-a81a-40b8-8a4e-1d67ea9e22b7"
+  },
+  "A01": {
+    "name": "어쿠스틱 포크",
+    "url": "https://suno.com/song/eb80c52c-3682-4aa6-a292-d279d8d2a672"
+  },
+  "A02": {
+    "name": "피아노 발라드",
+    "url": "https://suno.com/song/674ad8f5-9954-477b-8ed0-d0fb14e93b19"
+  },
+  "I01": {
+    "name": "로파이 힙합",
+    "url": "https://suno.com/song/bbef2621-34e6-499e-b360-a17903f828ab"
+  },
+  "I02": {
+    "name": "시네마틱 오케스트라",
+    "url": "https://suno.com/song/e61afdbc-90ed-4ec2-8ed3-0b5f434cc639"
+  }
+}
+</script>
+<div class="toolbar"><strong>수노 기초 · 보조자료</strong><a href="lesson.html">메인 강의</a></div>
+<main>
+<header><div class="eyebrow">SUNO · SONG STRUCTURE & STYLE DICTIONARY</div><h1>노래의 흐름을 고르고,<br>소리의 스타일을 들어보기</h1><p>구조는 노래의 순서, 스타일은 노래의 소리입니다.<br>가사 칸에는 구조를, Styles 칸에는 장르·악기·보컬·리듬을 넣어보세요.</p><div class="stats">구조 용어 14개 · 구조 템플릿 8개 · 스타일 24개 · 작성 2026.10.13</div></header>
+<nav aria-label="사전 목차"><a href="#how">사용법</a><a href="#terms">구조 용어</a><a href="#patterns">구조 템플릿</a><a href="#styles">스타일 / 듣기</a><a href="#editing">예시곡 연결</a></nav>
+<section class="intro-panel" id="how"><h2>처음에는 구조 하나, 스타일 하나</h2><div class="intro-grid"><p><strong>1. 가사의 흐름을 고르기</strong>S01 기본 팝 또는 S08 짧은 실습으로 시작하세요. 구조 틀을 복사한 뒤 안내 문장을 내 가사로 바꿉니다.</p><p><strong>2. 원하는 소리를 고르기</strong>스타일 카드를 골라 프롬프트를 Styles 칸에 붙입니다. 가사와 구조를 그대로 두고 스타일만 바꾸면 차이를 듣기 좋습니다.</p></div><div class="note">태그는 곡의 흐름을 안내하는 프롬프트입니다. 모든 태그·박자·BPM·길이를 수노가 정확하게 지키는 것은 아닙니다. 아래 템플릿과 스타일 문장은 <strong>직접 만든 수업용 시작 예시</strong>이며 생성 결과를 듣고 조정하세요.</div></section>
+<section class="section-panel" id="terms"><h2><span class="pill">A</span>곡 구조 용어 사전</h2><p class="small">기본 태그는 대괄호로 표시하고, 그 아래에 해당 구간의 가사를 씁니다. Hook처럼 ‘구간’보다 ‘기능’을 뜻하는 용어도 있습니다.</p><div class="table-wrap"><table><thead><tr><th>용어</th><th>역할 · 예시</th><th>입력 예시 · 구분할 점</th></tr></thead><tbody><tr><td><strong>Intro</strong><span>인트로</span></td><td>노래의 입구. 악기·리듬·분위기를 먼저 소개한다.<small>보컬 전에 짧은 피아노 연주</small></td><td><code>[Intro]</code><small>길게 늘어지면 첫 훅이 늦게 온다.</small></td></tr><tr><td><strong>Verse</strong><span>벌스 · 절</span></td><td>인물·장면·사건을 풀어낸다. 절마다 가사는 보통 달라진다.<small>열차 창가에 앉은 학생의 장면</small></td><td><code>[Verse 1]</code><small>Verse 2는 새 장면으로 이야기를 진행한다.</small></td></tr><tr><td><strong>Pre-Chorus</strong><span>프리코러스</span></td><td>벌스와 후렴 사이에서 기대와 긴장을 높인다.<small>목소리와 악기가 조금씩 커지는 구간</small></td><td><code>[Pre-Chorus]</code><small>모든 곡에 필요한 것은 아니다.</small></td></tr><tr><td><strong>Chorus</strong><span>코러스 · 후렴</span></td><td>곡의 핵심 메시지와 기억할 멜로디를 반복한다.<small>“우린 달려가”라는 중심 문장</small></td><td><code>[Chorus]</code><small>합창이라는 뜻으로만 이해하지 않기.</small></td></tr><tr><td><strong>Post-Chorus</strong><span>포스트코러스</span></td><td>후렴 뒤에 짧은 구호·반복 선율을 덧붙인다.<small>후렴 뒤의 “오오오” 구호</small></td><td><code>[Post-Chorus]</code><small>후렴 앞의 Pre-Chorus와 위치가 다르다.</small></td></tr><tr><td><strong>Hook</strong><span>훅</span></td><td>귀에 남는 짧은 가사·선율·리듬. 곡의 어느 위치에도 있을 수 있다.<small>짧은 제목 문장이나 인상적인 리프</small></td><td><code>[Chorus] + 반복할 훅 가사</code><small>훅은 기능이고, 후렴은 구간이다. 둘이 항상 같지는 않다.</small></td></tr><tr><td><strong>Bridge</strong><span>브리지</span></td><td>반복 흐름을 잠시 바꾸는 대비 구간. 마지막 후렴 전 시점·악기·화성을 바꿀 수 있다.<small>악기가 줄고 “오늘의 우리”로 시점 이동</small></td><td><code>[Bridge]</code><small>단순히 벌스와 후렴을 이어주는 모든 구간의 이름은 아니다.</small></td></tr><tr><td><strong>Interlude</strong><span>인터루드 · 간주</span></td><td>노래 중간에 보컬을 쉬고 악기를 들려준다.<small>절 사이의 짧은 피아노·기타 연주</small></td><td><code>[Instrumental Break]</code><small>인트로는 시작, 간주는 곡 중간에 놓는다.</small></td></tr><tr><td><strong>Solo</strong><span>솔로</span></td><td>특정 악기가 전면에 나오는 연주 구간.<small>기타가 새 선율을 이끄는 구간</small></td><td><code>[Guitar Solo]</code><small>모든 간주가 솔로는 아니다.</small></td></tr><tr><td><strong>Build-Up</strong><span>빌드업</span></td><td>리듬·음량·악기 밀도를 쌓아 다음 구간을 준비한다.<small>드럼 롤이 촘촘해지며 긴장 증가</small></td><td><code>[Build-Up]</code><small>프리코러스는 위치·역할, 빌드업은 에너지를 쌓는 방식이다.</small></td></tr><tr><td><strong>Drop</strong><span>드롭</span></td><td>쌓인 긴장을 풀며 핵심 비트·베이스가 등장하는 구간.<small>댄스곡에서 비트와 신스 훅이 전면에 등장</small></td><td><code>[Drop]</code><small>후렴과 겹칠 수도 있고, 가사 없는 구간일 수도 있다.</small></td></tr><tr><td><strong>Breakdown</strong><span>브레이크다운</span></td><td>악기와 리듬을 줄이거나 질감을 바꾸어 대비를 만든다.<small>킥이 빠지고 보컬·패드만 남는 구간</small></td><td><code>[Breakdown]</code><small>장르마다 뜻과 소리가 달라진다. 록에서는 무거운 리듬 구간일 수도 있다.</small></td></tr><tr><td><strong>Final Chorus</strong><span>마지막 후렴</span></td><td>곡의 중심 메시지를 마지막으로 강조한다. 합창·악기 추가로 변화를 줄 수 있다.<small>같은 후렴을 더 넓은 합창으로 반복</small></td><td><code>[Final Chorus]</code><small>전조는 선택 사항이다. 태그만으로 전조가 보장되지는 않는다.</small></td></tr><tr><td><strong>Outro</strong><span>아웃트로</span></td><td>반복·짧은 연주·마지막 한 줄로 노래를 마친다.<small>마지막 훅 한 줄 뒤 조용한 마무리</small></td><td><code>[Outro]</code><small>끝나는 길이와 방식은 결과를 듣고 확인한다.</small></td></tr></tbody></table></div><div class="note warm">Intro·Verse·Chorus·Bridge·Outro부터 익히세요. Post-Chorus·Build-Up·Drop·Solo 같은 추가 지시는 편곡 의도를 설명하는 예시로, 공식 고정 명령어 목록을 뜻하지 않습니다.</div></section>
+<section id="patterns"><h2><span class="pill">B</span>바로 쓰는 구조 템플릿</h2><p class="small">팝·발라드·랩·댄스·밴드에 자주 쓰이는 흐름을 수업용으로 정리했습니다. 장르마다 가능한 구조는 여러 가지입니다. 각 틀 아래의 ‘샘플’을 열면 같은 가사를 구조별로 적용한 예시를 볼 수 있습니다. 제공된 원본은 S07에 담았습니다.</p><div class="patterns"><article class="pattern" id="S01"><div class="eyebrow">S01 · 처음 만드는 노래 · 청량 팝 · 신스팝</div><h3>기본 팝</h3><p>절에서 이야기하고 후렴에서 한 문장을 반복하는 가장 간단한 출발점.</p><div class="sequence"><span>Intro</span><span>Verse 1</span><span>Chorus</span><span>Verse 2</span><span>Chorus</span><span>Bridge</span><span>Final Chorus</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Intro | train whistle | clean guitar]
+
+[Verse 1 | calm | clean guitar]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Chorus | uplifting | layered vocals]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Verse 2 | building energy]
+여기에 다음 장면의 가사를 넣으세요.
+
+[Chorus | uplifting | layered vocals]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Bridge | stripped down | piano]
+여기에 시점이나 감정이 달라지는 가사를 넣으세요.
+
+[Final Chorus | full band | choir]
+여기에 마지막 후렴 가사를 넣으세요.
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 프리코러스를 덜어내고 절 → 후렴의 흐름으로 재배치했습니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Intro | train whistle | clean guitar]
+
+[Verse 1 | calm | clean guitar]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+
+[Chorus | uplifting | layered vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Verse 2 | building energy]
+십일월 삼일 아침 그 거리에
+하나둘 모여든 교복들
+책을 덮고 구호 외치며
+우린 한 줄로 걸어갔어
+
+[Chorus | uplifting | layered vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Bridge | stripped down | piano]
+백 년 가까이 지난 오늘
+같은 나이, 같은 교복의 나
+그대들이 지켜낸 아침을
+이제는 노래로 기억할게
+
+[Final Chorus | full band | choir]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 이제 노래해
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details><p class="tip">Verse 1·2는 각각 새 장면, 후렴은 동일한 핵심 문장으로 비교해보세요.</p></article>
+<article class="pattern" id="S02"><div class="eyebrow">S02 · K-pop · 댄스 팝 · 큰 후렴</div><h3>상승형 팝 / K-pop</h3><p>프리코러스에서 기대를 높인 뒤 후렴의 크기를 대비시킨다.</p><div class="sequence"><span>Intro</span><span>Verse 1</span><span>Pre-Chorus</span><span>Chorus</span><span>Post-Chorus</span><span>Verse 2</span><span>Pre-Chorus</span><span>Chorus</span><span>Bridge</span><span>Final Chorus</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Intro | train whistle | bright synth]
+
+[Verse 1 | calm | rhythmic guitar]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Pre-Chorus | building tension]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Chorus | anthemic | layered vocals]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Post-Chorus | catchy hook | group vocals]
+여기에 짧게 반복할 훅 가사를 넣으세요.
+
+[Verse 2 | tense | rhythmic guitar]
+여기에 다음 장면의 가사를 넣으세요.
+
+[Pre-Chorus | building tension]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Chorus | anthemic | layered vocals]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Bridge | stripped down | piano]
+여기에 시점이나 감정이 달라지는 가사를 넣으세요.
+
+[Final Chorus | full arrangement | choir]
+여기에 마지막 후렴 가사를 넣으세요.
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 첫 후렴의 앞 두 줄을 포스트코러스로 한 번 더 반복합니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Intro | train whistle | bright synth]
+
+[Verse 1 | calm | rhythmic guitar]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+
+[Pre-Chorus | building tension]
+참으라고, 원래 그렇다고
+어른들은 고개를 저어도
+
+[Chorus | anthemic | layered vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Post-Chorus | catchy hook | group vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+
+[Verse 2 | tense | rhythmic guitar]
+십일월 삼일 아침 그 거리에
+하나둘 모여든 교복들
+책을 덮고 구호 외치며
+우린 한 줄로 걸어갔어
+
+[Pre-Chorus | building tension]
+작은 목소리 하나였지만
+기차를 타고 번져 나갔어
+
+[Chorus | anthemic | layered vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Bridge | stripped down | piano]
+백 년 가까이 지난 오늘
+같은 나이, 같은 교복의 나
+그대들이 지켜낸 아침을
+이제는 노래로 기억할게
+
+[Final Chorus | full arrangement | choir]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 이제 노래해
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details><p class="tip">가사가 길어지면 먼저 Post-Chorus를 빼세요. 여러 구간을 모두 넣을 필요는 없습니다.</p></article>
+<article class="pattern" id="S03"><div class="eyebrow">S03 · 짧은 영상 · 제목이 강한 노래</div><h3>후렴 먼저 / 훅 우선</h3><p>첫 부분부터 핵심을 들려주고 뒤에서 그 문장이 나온 이유를 풀어낸다.</p><div class="sequence"><span>Chorus</span><span>Verse 1</span><span>Pre-Chorus</span><span>Chorus</span><span>Verse 2</span><span>Bridge</span><span>Final Chorus</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Chorus | immediate hook | gang vocals]
+여기에 짧게 반복할 훅 가사를 넣으세요.
+
+[Verse 1 | calm | clean guitar]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Pre-Chorus | building tension]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Chorus | anthemic | gang vocals]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Verse 2 | tense | palm-muted guitar]
+여기에 다음 장면의 가사를 넣으세요.
+
+[Bridge | stripped down | piano]
+여기에 시점이나 감정이 달라지는 가사를 넣으세요.
+
+[Final Chorus | full band | choir]
+여기에 마지막 후렴 가사를 넣으세요.
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 후렴의 앞 두 줄로 바로 시작하고 두 번째 프리코러스는 생략했습니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Chorus | immediate hook | gang vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+
+[Verse 1 | calm | clean guitar]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+
+[Pre-Chorus | building tension]
+참으라고, 원래 그렇다고
+어른들은 고개를 저어도
+
+[Chorus | anthemic | gang vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Verse 2 | tense | palm-muted guitar]
+십일월 삼일 아침 그 거리에
+하나둘 모여든 교복들
+책을 덮고 구호 외치며
+우린 한 줄로 걸어갔어
+
+[Bridge | stripped down | piano]
+백 년 가까이 지난 오늘
+같은 나이, 같은 교복의 나
+그대들이 지켜낸 아침을
+이제는 노래로 기억할게
+
+[Final Chorus | full band | choir]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 이제 노래해
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details><p class="tip">첫 후렴은 짧게, 마지막 후렴은 전체 가사로 확장할 수 있습니다.</p></article>
+<article class="pattern" id="S04"><div class="eyebrow">S04 · 피아노 발라드 · 추모 · 편지</div><h3>서서히 커지는 발라드</h3><p>작은 시작과 큰 마지막 후렴의 대비로 감정선을 만든다.</p><div class="sequence"><span>Intro</span><span>Verse 1</span><span>Pre-Chorus</span><span>Chorus</span><span>Verse 2</span><span>Chorus</span><span>Bridge</span><span>Final Chorus</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Intro | train whistle | soft piano]
+
+[Verse 1 | intimate | piano]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Pre-Chorus | gradual build | strings]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Chorus | emotional | warm strings]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Verse 2 | restrained | piano and strings]
+여기에 다음 장면의 가사를 넣으세요.
+
+[Chorus | emotional | fuller arrangement]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Bridge | stripped down | solo piano]
+여기에 시점이나 감정이 달라지는 가사를 넣으세요.
+
+[Final Chorus | soaring | choir and strings]
+여기에 마지막 후렴 가사를 넣으세요.
+
+[Outro | train whistle | soft piano | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 두 번째 프리코러스를 생략하고 피아노·스트링 중심으로 편곡 지시를 바꿨습니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Intro | train whistle | soft piano]
+
+[Verse 1 | intimate | piano]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+
+[Pre-Chorus | gradual build | strings]
+참으라고, 원래 그렇다고
+어른들은 고개를 저어도
+
+[Chorus | emotional | warm strings]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Verse 2 | restrained | piano and strings]
+십일월 삼일 아침 그 거리에
+하나둘 모여든 교복들
+책을 덮고 구호 외치며
+우린 한 줄로 걸어갔어
+
+[Chorus | emotional | fuller arrangement]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Bridge | stripped down | solo piano]
+백 년 가까이 지난 오늘
+같은 나이, 같은 교복의 나
+그대들이 지켜낸 아침을
+이제는 노래로 기억할게
+
+[Final Chorus | soaring | choir and strings]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 이제 노래해
+
+[Outro | train whistle | soft piano | fade out]
+[End]</pre></div></details><p class="tip">스타일 칸에 intimate opening, gradual build, full final chorus처럼 크기 변화를 함께 설명하세요.</p></article>
+<article class="pattern" id="S05"><div class="eyebrow">S05 · 붐뱁 · 트랩 · 팝 랩</div><h3>랩 + 훅</h3><p>긴 랩 구간과 짧은 훅을 번갈아 배치한다.</p><div class="sequence"><span>Intro</span><span>Verse 1</span><span>Chorus</span><span>Verse 2</span><span>Chorus</span><span>Bridge</span><span>Final Chorus</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Intro | train whistle | sparse beat]
+
+[Verse 1 | rhythmic rap | clear diction]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Chorus | sung hook | group vocals]
+여기에 짧게 반복할 훅 가사를 넣으세요.
+
+[Verse 2 | rhythmic rap | building intensity]
+여기에 다음 장면의 가사를 넣으세요.
+
+[Chorus | sung hook | group vocals]
+여기에 짧게 반복할 훅 가사를 넣으세요.
+
+[Bridge | spoken rap | stripped down | piano]
+여기에 시점이나 감정이 달라지는 가사를 넣으세요.
+
+[Final Chorus | sung hook | choir]
+여기에 마지막 후렴 가사를 넣으세요.
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 프리코러스 가사를 랩 절에 합치고 중간 훅은 두 줄로 줄였습니다. 마지막 후렴은 네 줄로 확장합니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Intro | train whistle | sparse beat]
+
+[Verse 1 | rhythmic rap | clear diction]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+참으라고, 원래 그렇다고
+어른들은 고개를 저어도
+
+[Chorus | sung hook | group vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+
+[Verse 2 | rhythmic rap | building intensity]
+십일월 삼일 아침 그 거리에
+하나둘 모여든 교복들
+책을 덮고 구호 외치며
+우린 한 줄로 걸어갔어
+작은 목소리 하나였지만
+기차를 타고 번져 나갔어
+
+[Chorus | sung hook | group vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+
+[Bridge | spoken rap | stripped down | piano]
+백 년 가까이 지난 오늘
+같은 나이, 같은 교복의 나
+그대들이 지켜낸 아침을
+이제는 노래로 기억할게
+
+[Final Chorus | sung hook | choir]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 이제 노래해
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details><p class="tip">스타일 칸에서 rapped verses, sung hook를 지정하면 랩과 멜로디 훅의 역할을 구분하기 쉽습니다.</p></article>
+<article class="pattern" id="S06"><div class="eyebrow">S06 · EDM · 하우스 · 댄스</div><h3>빌드업 + 드롭</h3><p>보컬 구간 뒤 긴장을 쌓고 비트 중심 구간으로 풀어낸다.</p><div class="sequence"><span>Intro</span><span>Verse 1</span><span>Build-Up</span><span>Drop</span><span>Verse 2</span><span>Build-Up</span><span>Drop</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Intro | train whistle | atmospheric synth]
+
+[Verse 1 | restrained vocal | sparse beat]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Build-Up | rising tension | snare roll]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Drop | instrumental | driving bass | synth hook]
+
+[Verse 2 | tense vocal | sparse beat]
+여기에 다음 장면의 가사를 넣으세요.
+
+[Build-Up | rising tension | snare roll]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Drop | instrumental | full energy | synth hook]
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 프리코러스와 짧은 훅을 빌드업에 넣고 드롭은 연주로 비웠습니다. 브리지와 마지막 후렴은 생략했습니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Intro | train whistle | atmospheric synth]
+
+[Verse 1 | restrained vocal | sparse beat]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+
+[Build-Up | rising tension | snare roll]
+참으라고, 원래 그렇다고
+어른들은 고개를 저어도
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+
+[Drop | instrumental | driving bass | synth hook]
+
+[Verse 2 | tense vocal | sparse beat]
+십일월 삼일 아침 그 거리에
+하나둘 모여든 교복들
+책을 덮고 구호 외치며
+우린 한 줄로 걸어갔어
+
+[Build-Up | rising tension | snare roll]
+작은 목소리 하나였지만
+기차를 타고 번져 나갔어
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+
+[Drop | instrumental | full energy | synth hook]
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details><p class="tip">Drop 아래에는 가사를 빽빽하게 넣지 마세요. “instrumental drop”처럼 의도를 스타일 칸에도 적으세요.</p></article>
+<article class="pattern" id="S07"><div class="eyebrow">S07 · 록 · 팝 펑크 · 함께 부르는 노래</div><h3>밴드 앤섬</h3><p>프리코러스에서 긴장을 쌓고 함께 부르는 후렴으로 이어진다. 피아노 브리지 뒤 마지막 합창을 크게 펼친다.</p><div class="sequence"><span>Intro</span><span>Verse 1</span><span>Pre-Chorus</span><span>Chorus</span><span>Verse 2</span><span>Pre-Chorus</span><span>Chorus</span><span>Bridge</span><span>Final Chorus</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Intro | train whistle | muted guitar]
+
+[Verse 1 | calm | clean guitar]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Pre-Chorus | building tension]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Chorus | anthemic | gang vocals]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Verse 2 | tense | palm-muted guitar]
+여기에 다음 장면의 가사를 넣으세요.
+
+[Pre-Chorus]
+여기에 긴장과 기대를 높이는 가사를 넣으세요.
+
+[Chorus]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Bridge | stripped down | piano]
+여기에 시점이나 감정이 달라지는 가사를 넣으세요.
+
+[Final Chorus | key change up | choir]
+여기에 마지막 후렴 가사를 넣으세요.
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 제공해주신 예시의 가사·구간 순서·태그를 그대로 담았습니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Intro | train whistle | muted guitar]
+
+[Verse 1 | calm | clean guitar]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+
+[Pre-Chorus | building tension]
+참으라고, 원래 그렇다고
+어른들은 고개를 저어도
+
+[Chorus | anthemic | gang vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Verse 2 | tense | palm-muted guitar]
+십일월 삼일 아침 그 거리에
+하나둘 모여든 교복들
+책을 덮고 구호 외치며
+우린 한 줄로 걸어갔어
+
+[Pre-Chorus]
+작은 목소리 하나였지만
+기차를 타고 번져 나갔어
+
+[Chorus]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Bridge | stripped down | piano]
+백 년 가까이 지난 오늘
+같은 나이, 같은 교복의 나
+그대들이 지켜낸 아침을
+이제는 노래로 기억할게
+
+[Final Chorus | key change up | choir]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 이제 노래해
+
+[Outro | train whistle | fade out]
+[End]</pre></div></details><p class="tip">gang vocals는 여럿이 함께 외치는 보컬, stripped down은 악기를 줄이는 지시입니다. key change up은 위로 전조해달라는 요청이며 실제 반영 여부는 들어서 확인하세요.</p></article>
+<article class="pattern" id="S08"><div class="eyebrow">S08 · 무료 수업 · 빠른 비교 · 1차 초안</div><h3>짧은 실습 / 원절 노래</h3><p>가사와 장르의 어울림을 확인하기 위한 짧은 구조.</p><div class="sequence"><span>Intro</span><span>Verse 1</span><span>Chorus</span><span>Outro</span><span>End</span></div><details><summary>가사 칸에 붙일 틀</summary><div class="copybox"><button type="button" data-copy>구조 복사</button><pre>[Intro | short | train whistle | muted guitar]
+
+[Verse 1 | calm | clean guitar]
+여기에 첫 장면의 가사를 넣으세요.
+
+[Chorus | anthemic | gang vocals]
+여기에 반복할 핵심 후렴 가사를 넣으세요.
+
+[Outro | short | train whistle | fade out]
+[End]</pre></div></details>
+<details class="sample"><summary>샘플</summary><p class="small">〈통학열차〉 · 첫 번째 절과 후렴만 남긴 짧은 비교 실습용 버전입니다.</p><div class="copybox"><button type="button" data-copy>샘플 복사</button><pre>[Intro | short | train whistle | muted guitar]
+
+[Verse 1 | calm | clean guitar]
+덜컹이는 통학열차 창가에
+책가방 끈 꽉 쥔 열일곱
+누나의 댕기머리 끝을
+낯선 손이 잡아당긴 날
+
+[Chorus | anthemic | gang vocals]
+기차는 멈춰도 우린 달려가
+교모를 눌러쓰고 앞으로 가
+열일곱 목소리가 모여 하나
+그날의 11월, 우린 외쳤다
+
+[Outro | short | train whistle | fade out]
+[End]</pre></div></details><p class="tip">이 구조는 길이를 고정하지 않습니다. short intro, concise arrangement를 덧붙이고 실제 길이를 확인하세요.</p></article></div><div class="note">태그는 <code>[구간 | 분위기 | 악기·보컬]</code>처럼 읽습니다. 예를 들어 <code>[Intro | train whistle | muted guitar]</code>는 기차 기적과 소리를 눌러 연주하는 기타로 시작해달라는 뜻입니다. <code>[End]</code>는 마무리 의도를 적는 지시입니다. 틀의 ‘여기에 … 가사를 넣으세요.’를 모두 교체하세요. 반복할 후렴은 가사를 실제로 다시 넣습니다. ‘위와 같음’이나 설명문을 남기면 노랫말로 불릴 수 있습니다. 연주곡은 Instrumental 설정을 켜고 가사 대신 구간의 연주 의도를 설명해보세요.</div></section>
+<section id="styles"><div class="section-head"><h2><span class="pill">C</span>곡 스타일 사전</h2><span class="small">24 styles</span></div><p>대중음악과 영상 BGM에서 접하기 쉬운 대표 스타일을 골랐습니다. 사용량 순위는 아닙니다. <strong>BPM·박자·조성은 이 사전의 생성 예시</strong>이며 각 장르의 고정 규칙은 아닙니다.</p><div class="controls"><label class="sr-only" for="search">스타일 검색</label><input type="search" id="search" placeholder="이름·악기·키워드 검색 — 예: 피아노, 808, 신스팝" autocomplete="off"><div class="filters" id="filters" aria-label="스타일 분류"></div><div class="results" id="results" aria-live="polite"></div></div><div class="style-list"><article class="style-card" id="P01" data-category="팝" data-search="p01 팝 청량 팝 bright pop 110 bpm · 4/4 맑은 보컬과 또렷한 후렴이 중심인 밝은 팝. 클린 기타 · 신스 · 가벼운 드럼 bright pop, 110 bpm, 4/4, bright major-key feel, clean electric guitar, crisp drums, light synths, clear youthful vocal, catchy uplifting chorus, short intro"><div class="style-main"><div class="eyebrow">P01 · 팝</div><h3>청량 팝 <span>Bright Pop</span></h3><p>맑은 보컬과 또렷한 후렴이 중심인 밝은 팝.</p><dl><div><dt>예시 템포</dt><dd>110 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>클린 기타 · 신스 · 가벼운 드럼</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Bright pop, 110 BPM, 4/4, bright major-key feel, clean electric guitar, crisp drums, light synths, clear youthful vocal, catchy uplifting chorus, short intro</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 오늘의 학생들이 기억을 이어가는 희망의 노래.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="P01"><audio controls preload="none" aria-label="청량 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>후렴이 절보다 밝고 크게 열리는지.</p></div></aside></article>
+<article class="style-card" id="P02" data-category="팝" data-search="p02 팝 k-pop 댄스 팝 k-pop dance pop 118 bpm · 4/4 리듬과 보컬의 대비, 크게 기억되는 후렴을 사용하는 팝 편곡. k-pop 전체를 뜻하는 단일 장르는 아니다. 전자 드럼 · 신스 베이스 · 보컬 하모니 k-pop dance pop, 118 bpm, 4/4, punchy electronic drums, bright synth bass, clear youthful lead vocal, rising pre-chorus, bold melodic chorus, layered backing vocals, polished production"><div class="style-main"><div class="eyebrow">P02 · 팝</div><h3>K-pop 댄스 팝 <span>K-pop Dance Pop</span></h3><p>리듬과 보컬의 대비, 크게 기억되는 후렴을 사용하는 팝 편곡. K-pop 전체를 뜻하는 단일 장르는 아니다.</p><dl><div><dt>예시 템포</dt><dd>118 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>전자 드럼 · 신스 베이스 · 보컬 하모니</dd></div><div><dt>추천 구조</dt><dd><a href="#S02">S02 · 상승형 팝 / K-pop</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>K-pop dance pop, 118 BPM, 4/4, punchy electronic drums, bright synth bass, clear youthful lead vocal, rising pre-chorus, bold melodic chorus, layered backing vocals, polished production</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 함께 부르는 짧은 구호를 후렴에 배치.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="P02"><audio controls preload="none" aria-label="K-pop 댄스 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>프리코러스에서 쌓고 후렴에서 풀리는 대비.</p></div></aside></article>
+<article class="style-card" id="P03" data-category="팝" data-search="p03 팝 신스팝 synth-pop 108 bpm · 4/4 신시사이저의 음색과 반복 선율이 노래를 이끈다. 신스 패드 · 아르페지오 · 전자 드럼 synth-pop, 108 bpm, 4/4, shimmering synth arpeggios, warm pads, electronic drums, melodic bass, airy clear vocal, nostalgic yet hopeful, memorable chorus"><div class="style-main"><div class="eyebrow">P03 · 팝</div><h3>신스팝 <span>Synth-pop</span></h3><p>신시사이저의 음색과 반복 선율이 노래를 이끈다.</p><dl><div><dt>예시 템포</dt><dd>108 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>신스 패드 · 아르페지오 · 전자 드럼</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Synth-pop, 108 BPM, 4/4, shimmering synth arpeggios, warm pads, electronic drums, melodic bass, airy clear vocal, nostalgic yet hopeful, memorable chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 1929년의 기억을 현재의 소리로 옮기기.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="P03"><audio controls preload="none" aria-label="신스팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>전자 소리의 반복 훅과 보컬의 관계.</p></div></aside></article>
+<article class="style-card" id="P04" data-category="팝" data-search="p04 팝 시티팝 city pop 104 bpm · 4/4 도시적인 팝에 펑크·재즈의 리듬과 화성 색을 섞은 편곡 방향. 일렉트릭 피아노 · 리듬 기타 · 베이스 city pop, 104 bpm, 4/4, jazzy electric piano chords, clean rhythm guitar, melodic bass, smooth drums, warm clear vocal, bittersweet urban nostalgia, breezy chorus"><div class="style-main"><div class="eyebrow">P04 · 팝</div><h3>시티팝 <span>City Pop</span></h3><p>도시적인 팝에 펑크·재즈의 리듬과 화성 색을 섞은 편곡 방향.</p><dl><div><dt>예시 템포</dt><dd>104 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>일렉트릭 피아노 · 리듬 기타 · 베이스</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>City pop, 104 BPM, 4/4, jazzy electric piano chords, clean rhythm guitar, melodic bass, smooth drums, warm clear vocal, bittersweet urban nostalgia, breezy chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 열차·거리·하교 풍경을 서정적으로 표현.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="P04"><audio controls preload="none" aria-label="시티팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>베이스의 움직임, 기타의 짧은 리듬, 풍부한 화음.</p></div></aside></article>
+<article class="style-card" id="P05" data-category="팝" data-search="p05 팝 디스코 팝 disco pop 116 bpm · 4/4 고르게 뛰는 킥과 움직이는 베이스로 몸을 움직이게 하는 팝. 펑키 베이스 · 리듬 기타 · 스트링 disco pop, 116 bpm, 4/4, four-on-the-floor kick, funky bassline, rhythmic clean guitar, bright strings, energetic clear vocal, joyful group chorus, danceable groove"><div class="style-main"><div class="eyebrow">P05 · 팝</div><h3>디스코 팝 <span>Disco Pop</span></h3><p>고르게 뛰는 킥과 움직이는 베이스로 몸을 움직이게 하는 팝.</p><dl><div><dt>예시 템포</dt><dd>116 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>펑키 베이스 · 리듬 기타 · 스트링</dd></div><div><dt>추천 구조</dt><dd><a href="#S02">S02 · 상승형 팝 / K-pop</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Disco pop, 116 BPM, 4/4, four-on-the-floor kick, funky bassline, rhythmic clean guitar, bright strings, energetic clear vocal, joyful group chorus, danceable groove</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 연대와 희망을 밝은 합창으로 표현.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="P05"><audio controls preload="none" aria-label="디스코 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>쿵쿵 이어지는 킥 위에서 베이스가 움직이는지.</p></div></aside></article>
+<article class="style-card" id="P06" data-category="팝" data-search="p06 팝 드림 팝 dream pop 88 bpm · 4/4 공간감이 큰 기타와 부드러운 보컬이 만드는 몽환적 팝. 리버브 기타 · 패드 · 부드러운 드럼 dream pop, 88 bpm, 4/4, reverb-soaked clean guitars, soft drums, warm bass, atmospheric pads, gentle clear vocal, dreamy and reflective, floating melodic chorus"><div class="style-main"><div class="eyebrow">P06 · 팝</div><h3>드림 팝 <span>Dream Pop</span></h3><p>공간감이 큰 기타와 부드러운 보컬이 만드는 몽환적 팝.</p><dl><div><dt>예시 템포</dt><dd>88 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>리버브 기타 · 패드 · 부드러운 드럼</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Dream pop, 88 BPM, 4/4, reverb-soaked clean guitars, soft drums, warm bass, atmospheric pads, gentle clear vocal, dreamy and reflective, floating melodic chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 과거의 기억과 오늘의 상상을 연결.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="P06"><audio controls preload="none" aria-label="드림 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>잔향과 보컬이 넓은 공간을 만드는지.</p></div></aside></article>
+<article class="style-card" id="R01" data-category="밴드 / 록" data-search="r01 밴드 / 록 인디 록 indie rock 122 bpm · 4/4 기타 중심 밴드의 질감과 개성 있는 보컬을 살리는 방향. 일렉트릭 기타 · 베이스 · 생드럼 indie rock, 122 bpm, 4/4, jangly electric guitars, live drums, warm bass, earnest youthful vocal, dynamic verses, open singalong chorus, organic band sound"><div class="style-main"><div class="eyebrow">R01 · 밴드 / 록</div><h3>인디 록 <span>Indie Rock</span></h3><p>기타 중심 밴드의 질감과 개성 있는 보컬을 살리는 방향.</p><dl><div><dt>예시 템포</dt><dd>122 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>일렉트릭 기타 · 베이스 · 생드럼</dd></div><div><dt>추천 구조</dt><dd><a href="#S07">S07 · 밴드 앤섬</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Indie rock, 122 BPM, 4/4, jangly electric guitars, live drums, warm bass, earnest youthful vocal, dynamic verses, open singalong chorus, organic band sound</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 개인의 망설임에서 함께 움직이는 장면으로.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="R01"><audio controls preload="none" aria-label="인디 록 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>기타 리프와 드럼이 보컬을 어떻게 밀어주는지.</p></div></aside></article>
+<article class="style-card" id="R02" data-category="밴드 / 록" data-search="r02 밴드 / 록 팝 펑크 pop punk 154 bpm · 4/4 빠른 밴드 리듬과 기억하기 쉬운 팝 후렴의 결합. 파워코드 기타 · 빠른 드럼 · 베이스 pop punk, 154 bpm, 4/4, crunchy power-chord guitars, fast live drums, driving bass, energetic youthful vocal, short punchy verses, melodic singalong chorus, spirited and hopeful"><div class="style-main"><div class="eyebrow">R02 · 밴드 / 록</div><h3>팝 펑크 <span>Pop Punk</span></h3><p>빠른 밴드 리듬과 기억하기 쉬운 팝 후렴의 결합.</p><dl><div><dt>예시 템포</dt><dd>154 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>파워코드 기타 · 빠른 드럼 · 베이스</dd></div><div><dt>추천 구조</dt><dd><a href="#S07">S07 · 밴드 앤섬</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Pop punk, 154 BPM, 4/4, crunchy power-chord guitars, fast live drums, driving bass, energetic youthful vocal, short punchy verses, melodic singalong chorus, spirited and hopeful</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 짧은 선언과 친구들의 응원 구호.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="R02"><audio controls preload="none" aria-label="팝 펑크 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>빠른 속도에서도 후렴 가사가 또렷한지.</p></div></aside></article>
+<article class="style-card" id="R03" data-category="밴드 / 록" data-search="r03 밴드 / 록 록 앤섬 rock anthem 128 bpm · 4/4 함께 따라 부를 수 있는 큰 후렴과 힘 있는 밴드 편곡. 앤섬은 장르보다 곡의 성격을 가리킨다. 큰 드럼 · 기타 · 그룹 보컬 rock anthem, 128 bpm, 4/4, driving live drums, bright electric guitars, strong bass, clear youthful lead vocal, group singalong chorus, defiant yet hopeful, quiet bridge, full final chorus"><div class="style-main"><div class="eyebrow">R03 · 밴드 / 록</div><h3>록 앤섬 <span>Rock Anthem</span></h3><p>함께 따라 부를 수 있는 큰 후렴과 힘 있는 밴드 편곡. 앤섬은 장르보다 곡의 성격을 가리킨다.</p><dl><div><dt>예시 템포</dt><dd>128 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>큰 드럼 · 기타 · 그룹 보컬</dd></div><div><dt>추천 구조</dt><dd><a href="#S07">S07 · 밴드 앤섬</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Rock anthem, 128 BPM, 4/4, driving live drums, bright electric guitars, strong bass, clear youthful lead vocal, group singalong chorus, defiant yet hopeful, quiet bridge, full final chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 〈통학열차〉처럼 용기와 연대감을 표현.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="R03"><audio controls preload="none" aria-label="록 앤섬 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>마지막 후렴에서 여러 목소리가 함께 들리는지.</p></div></aside></article>
+<article class="style-card" id="H01" data-category="힙합 / R&amp;B" data-search="h01 힙합 / r&amp;b 붐뱁 힙합 boom bap hip-hop 90 bpm · 4/4 또렷한 킥·스네어와 랩의 말맛을 중심에 둔다. 킥 · 스네어 · 재즈풍 건반 boom bap hip-hop, 90 bpm, 4/4, punchy kick and snare, dusty jazz-inspired keys, warm bass, clear rhythmic korean rap, concise sung hook, thoughtful and confident"><div class="style-main"><div class="eyebrow">H01 · 힙합 / R&amp;B</div><h3>붐뱁 힙합 <span>Boom Bap Hip-hop</span></h3><p>또렷한 킥·스네어와 랩의 말맛을 중심에 둔다.</p><dl><div><dt>예시 템포</dt><dd>90 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>킥 · 스네어 · 재즈풍 건반</dd></div><div><dt>추천 구조</dt><dd><a href="#S05">S05 · 랩 + 훅</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Boom bap hip-hop, 90 BPM, 4/4, punchy kick and snare, dusty jazz-inspired keys, warm bass, clear rhythmic Korean rap, concise sung hook, thoughtful and confident</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 역사 장면을 자신의 말로 설명하는 랩.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="H01"><audio controls preload="none" aria-label="붐뱁 힙합 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>박자 위에 가사가 걸리는 위치와 발음.</p></div></aside></article>
+<article class="style-card" id="H02" data-category="힙합 / R&amp;B" data-search="h02 힙합 / r&amp;b 트랩 / 팝 랩 trap / pop rap 140 bpm · 하프타임 느낌 808 베이스와 잘게 움직이는 하이햇, 랩 또는 멜로디 훅을 사용한다. 808 베이스 · 하이햇 · 신스 melodic trap pop, 140 bpm, 4/4 half-time feel, deep 808 bass, crisp rolling hi-hats, sparse synth melody, clear rap verses, melodic sung hook, determined and reflective"><div class="style-main"><div class="eyebrow">H02 · 힙합 / R&amp;B</div><h3>트랩 / 팝 랩 <span>Trap / Pop Rap</span></h3><p>808 베이스와 잘게 움직이는 하이햇, 랩 또는 멜로디 훅을 사용한다.</p><dl><div><dt>예시 템포</dt><dd>140 BPM · 하프타임 느낌</dd></div><div><dt>핵심 악기</dt><dd>808 베이스 · 하이햇 · 신스</dd></div><div><dt>추천 구조</dt><dd><a href="#S05">S05 · 랩 + 훅</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Melodic trap pop, 140 BPM, 4/4 half-time feel, deep 808 bass, crisp rolling hi-hats, sparse synth melody, clear rap verses, melodic sung hook, determined and reflective</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 짧은 랩 절과 반복되는 제목 훅.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="H02"><audio controls preload="none" aria-label="트랩 / 팝 랩 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>140 BPM인데 약 70 BPM처럼 느껴지는 큰 박과 촘촘한 하이햇.</p></div></aside></article>
+<article class="style-card" id="H03" data-category="힙합 / R&amp;B" data-search="h03 힙합 / r&amp;b 컨템퍼러리 r&amp;b contemporary r&amp;b 84 bpm · 4/4 부드러운 그루브와 보컬의 섬세한 리듬·선율을 살린다. 일렉트릭 피아노 · 베이스 · 전자 드럼 contemporary r&amp;b, 84 bpm, 4/4, warm electric piano, deep bass, restrained syncopated drums, smooth clear vocal, tasteful harmonies, intimate verse, soulful melodic chorus"><div class="style-main"><div class="eyebrow">H03 · 힙합 / R&amp;B</div><h3>컨템퍼러리 R&amp;B <span>Contemporary R&amp;B</span></h3><p>부드러운 그루브와 보컬의 섬세한 리듬·선율을 살린다.</p><dl><div><dt>예시 템포</dt><dd>84 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>일렉트릭 피아노 · 베이스 · 전자 드럼</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Contemporary R&amp;B, 84 BPM, 4/4, warm electric piano, deep bass, restrained syncopated drums, smooth clear vocal, tasteful harmonies, intimate verse, soulful melodic chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 과거의 학생에게 보내는 개인적인 편지.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="H03"><audio controls preload="none" aria-label="컨템퍼러리 R&amp;B 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>보컬이 박자에 딱 붙거나 살짝 뒤로 기대는 느낌.</p></div></aside></article>
+<article class="style-card" id="H04" data-category="힙합 / R&amp;B" data-search="h04 힙합 / r&amp;b 네오 소울 neo soul 82 bpm · 4/4 소울의 보컬 감정에 재즈풍 화음과 느긋한 리듬을 더한다. 일렉트릭 피아노 · 생드럼 · 베이스 neo soul, 82 bpm, 4/4, rich electric piano chords, laid-back live drum groove, warm bass, expressive clear vocal, subtle guitar fills, soulful and contemplative, organic warm production"><div class="style-main"><div class="eyebrow">H04 · 힙합 / R&amp;B</div><h3>네오 소울 <span>Neo Soul</span></h3><p>소울의 보컬 감정에 재즈풍 화음과 느긋한 리듬을 더한다.</p><dl><div><dt>예시 템포</dt><dd>82 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>일렉트릭 피아노 · 생드럼 · 베이스</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Neo soul, 82 BPM, 4/4, rich electric piano chords, laid-back live drum groove, warm bass, expressive clear vocal, subtle guitar fills, soulful and contemplative, organic warm production</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 차분한 다짐과 성찰을 담는 노래.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="H04"><audio controls preload="none" aria-label="네오 소울 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>복잡한 화음보다 느긋한 리듬과 보컬의 대화를 듣기.</p></div></aside></article>
+<article class="style-card" id="E01" data-category="전자 / 댄스" data-search="e01 전자 / 댄스 하우스 팝 house pop 124 bpm · 4/4 일정한 킥과 반복 리듬에 팝 보컬·후렴을 결합. 킥 · 피아노 코드 · 신스 베이스 house pop, 124 bpm, 4/4, steady four-on-the-floor kick, bright piano chords, pulsing synth bass, clear melodic vocal, uplifting build-up, instrumental drop with synth hook"><div class="style-main"><div class="eyebrow">E01 · 전자 / 댄스</div><h3>하우스 팝 <span>House Pop</span></h3><p>일정한 킥과 반복 리듬에 팝 보컬·후렴을 결합.</p><dl><div><dt>예시 템포</dt><dd>124 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>킥 · 피아노 코드 · 신스 베이스</dd></div><div><dt>추천 구조</dt><dd><a href="#S06">S06 · 빌드업 + 드롭</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>House pop, 124 BPM, 4/4, steady four-on-the-floor kick, bright piano chords, pulsing synth bass, clear melodic vocal, uplifting build-up, instrumental drop with synth hook</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 짧은 연대 구호를 춤추는 리듬에 얹기.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="E01"><audio controls preload="none" aria-label="하우스 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>네 박 모두의 킥과 박 사이의 하이햇.</p></div></aside></article>
+<article class="style-card" id="E02" data-category="전자 / 댄스" data-search="e02 전자 / 댄스 edm 팝 edm pop 128 bpm · 4/4 빌드업과 드롭의 크기 차이를 크게 만드는 전자 팝 방향. 전자 드럼 · 신스 리드 · 패드 edm pop, 128 bpm, 4/4, clear youthful vocal, atmospheric verse, rising drum build-up, bright synth lead, punchy bass, euphoric instrumental drop, hopeful and energetic"><div class="style-main"><div class="eyebrow">E02 · 전자 / 댄스</div><h3>EDM 팝 <span>EDM Pop</span></h3><p>빌드업과 드롭의 크기 차이를 크게 만드는 전자 팝 방향.</p><dl><div><dt>예시 템포</dt><dd>128 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>전자 드럼 · 신스 리드 · 패드</dd></div><div><dt>추천 구조</dt><dd><a href="#S06">S06 · 빌드업 + 드롭</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>EDM pop, 128 BPM, 4/4, clear youthful vocal, atmospheric verse, rising drum build-up, bright synth lead, punchy bass, euphoric instrumental drop, hopeful and energetic</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 하나의 짧은 메시지를 크게 반복.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="E02"><audio controls preload="none" aria-label="EDM 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>보컬 구간에서 드롭으로 넘어가는 에너지 변화.</p></div></aside></article>
+<article class="style-card" id="E03" data-category="전자 / 댄스" data-search="e03 전자 / 댄스 uk 개러지 팝 uk garage pop 132 bpm · 4/4 이 예시는 2-step 계열로, 엇갈리는 킥과 셔플 리듬이 튀는 듯한 움직임을 만든다. 2-step 드럼 · 서브베이스 · 건반 uk garage pop, 132 bpm, 4/4, shuffled two-step drums, warm sub bass, bright keyboard chords, clear light vocal, bouncy syncopated groove, catchy melodic chorus"><div class="style-main"><div class="eyebrow">E03 · 전자 / 댄스</div><h3>UK 개러지 팝 <span>UK Garage Pop</span></h3><p>이 예시는 2-step 계열로, 엇갈리는 킥과 셔플 리듬이 튀는 듯한 움직임을 만든다.</p><dl><div><dt>예시 템포</dt><dd>132 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>2-step 드럼 · 서브베이스 · 건반</dd></div><div><dt>추천 구조</dt><dd><a href="#S02">S02 · 상승형 팝 / K-pop</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>UK garage pop, 132 BPM, 4/4, shuffled two-step drums, warm sub bass, bright keyboard chords, clear light vocal, bouncy syncopated groove, catchy melodic chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 현재 학생의 목소리로 가볍고 리듬감 있게.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="E03"><audio controls preload="none" aria-label="UK 개러지 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>이 예시의 2-step 리듬에서 킥이 모든 박에 고르게 놓이지 않는지.</p></div></aside></article>
+<article class="style-card" id="E04" data-category="전자 / 댄스" data-search="e04 전자 / 댄스 드럼 앤 베이스 팝 drum and bass pop 172 bpm · 4/4 빠른 브레이크비트와 베이스에 팝 선율을 더한다. 브레이크비트 드럼 · 서브베이스 · 패드 liquid drum and bass pop, 172 bpm, 4/4, fast rolling breakbeats, warm sub bass, atmospheric pads, clear melodic vocal, emotional uplifting chorus, flowing and energetic"><div class="style-main"><div class="eyebrow">E04 · 전자 / 댄스</div><h3>드럼 앤 베이스 팝 <span>Drum and Bass Pop</span></h3><p>빠른 브레이크비트와 베이스에 팝 선율을 더한다.</p><dl><div><dt>예시 템포</dt><dd>172 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>브레이크비트 드럼 · 서브베이스 · 패드</dd></div><div><dt>추천 구조</dt><dd><a href="#S02">S02 · 상승형 팝 / K-pop</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Liquid drum and bass pop, 172 BPM, 4/4, fast rolling breakbeats, warm sub bass, atmospheric pads, clear melodic vocal, emotional uplifting chorus, flowing and energetic</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 달리는 열차와 앞으로 나아가는 움직임.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="E04"><audio controls preload="none" aria-label="드럼 앤 베이스 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>드럼은 빠르지만 보컬 선율은 넓게 흐르는지.</p></div></aside></article>
+<article class="style-card" id="G01" data-category="글로벌 그루브" data-search="g01 글로벌 그루브 아프로비츠 팝 afrobeats pop 104 bpm · 4/4 서아프리카 계열 현대 팝의 여러 흐름을 묶는 이름. 서로 얽히는 타악 리듬을 출발점으로 삼는다. 여러 타악기 · 기타 · 베이스 afrobeats pop, 104 bpm, 4/4, interlocking percussion, warm bass, bright clean guitar, clear melodic vocal, relaxed syncopated groove, joyful and hopeful, concise catchy chorus"><div class="style-main"><div class="eyebrow">G01 · 글로벌 그루브</div><h3>아프로비츠 팝 <span>Afrobeats Pop</span></h3><p>서아프리카 계열 현대 팝의 여러 흐름을 묶는 이름. 서로 얽히는 타악 리듬을 출발점으로 삼는다.</p><dl><div><dt>예시 템포</dt><dd>104 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>여러 타악기 · 기타 · 베이스</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Afrobeats pop, 104 BPM, 4/4, interlocking percussion, warm bass, bright clean guitar, clear melodic vocal, relaxed syncopated groove, joyful and hopeful, concise catchy chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 밝은 연결감과 함께 움직이는 느낌.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="G01"><audio controls preload="none" aria-label="아프로비츠 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>타악기와 보컬이 서로 다른 리듬으로 맞물리는지.</p></div></aside></article>
+<article class="style-card" id="G02" data-category="글로벌 그루브" data-search="g02 글로벌 그루브 아마피아노 팝 amapiano pop 112 bpm · 4/4 남아프리카의 하우스 계열 스타일. 피아노·타악기·낮고 울리는 log drum 음색이 특징. 피아노 · 셰이커 · log drum 베이스 amapiano pop, 112 bpm, 4/4, warm piano chords, deep log drum bass, shakers, spacious percussion, clear short vocal hook, relaxed rolling groove, bright and communal"><div class="style-main"><div class="eyebrow">G02 · 글로벌 그루브</div><h3>아마피아노 팝 <span>Amapiano Pop</span></h3><p>남아프리카의 하우스 계열 스타일. 피아노·타악기·낮고 울리는 log drum 음색이 특징.</p><dl><div><dt>예시 템포</dt><dd>112 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>피아노 · 셰이커 · log drum 베이스</dd></div><div><dt>추천 구조</dt><dd><a href="#S06">S06 · 빌드업 + 드롭</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Amapiano pop, 112 BPM, 4/4, warm piano chords, deep log drum bass, shakers, spacious percussion, clear short vocal hook, relaxed rolling groove, bright and communal</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 과한 가사보다 짧은 구호와 리듬 중심.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="G02"><audio controls preload="none" aria-label="아마피아노 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>낮은 타격음이 리듬과 베이스 역할을 함께 하는지.</p></div></aside></article>
+<article class="style-card" id="G03" data-category="글로벌 그루브" data-search="g03 글로벌 그루브 레게톤 팝 reggaeton pop 96 bpm · 4/4 반복되는 dembow 리듬에 팝 선율을 결합한다. 전자 타악기 · 베이스 · 신스 reggaeton pop, 96 bpm, 4/4, dembow drum groove, warm bass, bright synth accents, clear rhythmic vocal, melodic chorus, upbeat and confident"><div class="style-main"><div class="eyebrow">G03 · 글로벌 그루브</div><h3>레게톤 팝 <span>Reggaeton Pop</span></h3><p>반복되는 dembow 리듬에 팝 선율을 결합한다.</p><dl><div><dt>예시 템포</dt><dd>96 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>전자 타악기 · 베이스 · 신스</dd></div><div><dt>추천 구조</dt><dd><a href="#S02">S02 · 상승형 팝 / K-pop</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Reggaeton pop, 96 BPM, 4/4, dembow drum groove, warm bass, bright synth accents, clear rhythmic vocal, melodic chorus, upbeat and confident</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 가사를 짧게 나누어 박자에 맞춰 말하기.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="G03"><audio controls preload="none" aria-label="레게톤 팝 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>킥과 스네어의 반복 배열이 만드는 흔들림.</p></div></aside></article>
+<article class="style-card" id="A01" data-category="어쿠스틱 / 발라드" data-search="a01 어쿠스틱 / 발라드 어쿠스틱 포크 acoustic folk 84 bpm · 3/4 어쿠스틱 악기와 이야기하는 보컬이 중심. 이 예시는 세 박 왈츠이며 포크 전체의 고정 박자는 아니다. 핑거피킹 기타 · 가벼운 타악기 acoustic folk, 84 bpm, 3/4 waltz, fingerpicked acoustic guitar, gentle upright bass, light brushed percussion, clear storytelling vocal, warm and nostalgic, simple memorable chorus"><div class="style-main"><div class="eyebrow">A01 · 어쿠스틱 / 발라드</div><h3>어쿠스틱 포크 <span>Acoustic Folk</span></h3><p>어쿠스틱 악기와 이야기하는 보컬이 중심. 이 예시는 세 박 왈츠이며 포크 전체의 고정 박자는 아니다.</p><dl><div><dt>예시 템포</dt><dd>84 BPM · 3/4</dd></div><div><dt>핵심 악기</dt><dd>핑거피킹 기타 · 가벼운 타악기</dd></div><div><dt>추천 구조</dt><dd><a href="#S01">S01 · 기본 팝</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Acoustic folk, 84 BPM, 3/4 waltz, fingerpicked acoustic guitar, gentle upright bass, light brushed percussion, clear storytelling vocal, warm and nostalgic, simple memorable chorus</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 열일곱 학생의 하루를 한 장면씩 이야기.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="A01"><audio controls preload="none" aria-label="어쿠스틱 포크 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>한 마디 세 박의 흐름과 자연스러운 가사 전달.</p></div></aside></article>
+<article class="style-card" id="A02" data-category="어쿠스틱 / 발라드" data-search="a02 어쿠스틱 / 발라드 피아노 발라드 piano ballad 72 bpm · 6/8 피아노와 보컬에서 시작해 감정을 점차 키우는 편곡. 이 예시는 여섯 박을 두 묶음으로 느낀다. 피아노 · 스트링 · 드럼 piano ballad, 72 bpm, 6/8, warm piano, gentle strings, clear expressive vocal, intimate opening, gradual dynamic build, heartfelt chorus, full final chorus, reflective and hopeful"><div class="style-main"><div class="eyebrow">A02 · 어쿠스틱 / 발라드</div><h3>피아노 발라드 <span>Piano Ballad</span></h3><p>피아노와 보컬에서 시작해 감정을 점차 키우는 편곡. 이 예시는 여섯 박을 두 묶음으로 느낀다.</p><dl><div><dt>예시 템포</dt><dd>72 BPM · 6/8</dd></div><div><dt>핵심 악기</dt><dd>피아노 · 스트링 · 드럼</dd></div><div><dt>추천 구조</dt><dd><a href="#S04">S04 · 서서히 커지는 발라드</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Piano ballad, 72 BPM, 6/8, warm piano, gentle strings, clear expressive vocal, intimate opening, gradual dynamic build, heartfelt chorus, full final chorus, reflective and hopeful</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 감사·기억·추모를 담은 편지.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="A02"><audio controls preload="none" aria-label="피아노 발라드 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>작은 첫 절과 큰 마지막 후렴, 6/8의 흔들림.</p></div></aside></article>
+<article class="style-card" id="I01" data-category="연주 / 영상" data-search="i01 연주 / 영상 로파이 힙합 lo-fi hip-hop 76 bpm · 4/4 부드러운 비트와 소박한 질감으로 집중·회상의 배경을 만든다. 재즈풍 건반 · 부드러운 드럼 · 베이스 instrumental lo-fi hip-hop, 76 bpm, 4/4, mellow jazz-inspired keys, soft dusty drums, warm bass, subtle tape texture, calm and reflective, no vocals, gentle repeating motif"><div class="style-main"><div class="eyebrow">I01 · 연주 / 영상</div><h3>로파이 힙합 <span>Lo-fi Hip-hop</span></h3><p>부드러운 비트와 소박한 질감으로 집중·회상의 배경을 만든다.</p><dl><div><dt>예시 템포</dt><dd>76 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>재즈풍 건반 · 부드러운 드럼 · 베이스</dd></div><div><dt>추천 구조</dt><dd><a href="#S08">S08 · 짧은 실습 / 원절 노래</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Instrumental lo-fi hip-hop, 76 BPM, 4/4, mellow jazz-inspired keys, soft dusty drums, warm bass, subtle tape texture, calm and reflective, no vocals, gentle repeating motif</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 역사 사진·글을 읽을 때의 배경음악.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="I01"><audio controls preload="none" aria-label="로파이 힙합 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>보컬 대신 리듬과 건반이 분위기를 만드는지.</p></div></aside></article>
+<article class="style-card" id="I02" data-category="연주 / 영상" data-search="i02 연주 / 영상 시네마틱 오케스트라 cinematic orchestral 90 bpm · 4/4 장면의 감정에 맞춰 피아노·현악·금관의 크기를 조절하는 영상 음악 방향. 피아노 · 현악 · 금관 · 타악기 instrumental cinematic orchestral, 90 bpm, 4/4, intimate piano motif, warm strings, restrained brass, gradual percussion build, dignified and hopeful, emotional final swell, no vocals"><div class="style-main"><div class="eyebrow">I02 · 연주 / 영상</div><h3>시네마틱 오케스트라 <span>Cinematic Orchestral</span></h3><p>장면의 감정에 맞춰 피아노·현악·금관의 크기를 조절하는 영상 음악 방향.</p><dl><div><dt>예시 템포</dt><dd>90 BPM · 4/4</dd></div><div><dt>핵심 악기</dt><dd>피아노 · 현악 · 금관 · 타악기</dd></div><div><dt>추천 구조</dt><dd><a href="#S08">S08 · 짧은 실습 / 원절 노래</a></dd></div></dl><div class="copybox"><button type="button" data-copy>스타일 복사</button><pre>Instrumental cinematic orchestral, 90 BPM, 4/4, intimate piano motif, warm strings, restrained brass, gradual percussion build, dignified and hopeful, emotional final swell, no vocals</pre></div><p class="use"><strong>11·3 주제에 적용</strong> 기념 영상의 시작과 마지막 장면 연결.</p></div><aside class="listen-panel"><div class="listen-title">스타일 예시 듣기</div><div class="player" data-player="I02"><audio controls preload="none" aria-label="시네마틱 오케스트라 예시곡 재생기"></audio><p class="empty">예시곡 연결 전</p></div><div class="listen-point"><strong>들으면서 확인</strong><p>작은 동기가 악기와 음량의 변화로 커지는지.</p></div></aside></article></div><p class="no-results" id="no-results" hidden>검색 결과가 없습니다. 다른 이름이나 악기로 검색해보세요.</p></section>
+<section class="section-panel" id="editing"><h2><span class="pill">D</span>VS Code에서 예시곡 연결하기</h2><p>이 HTML을 열고 <code>id="TRACKS"</code>를 검색하세요. 카드의 번호와 같은 항목에서 <code>"url": ""</code>의 빈 따옴표 안에 곡 주소를 넣고 저장한 뒤 브라우저를 새로고침합니다.</p><pre class="edit-example">"P01": {
+  "name": "청량 팝",
+  "url": "https://suno.com/song/여기에-곡의-UUID"
+}</pre><div class="intro-grid"><div><h3>수노 내장 플레이어</h3><p class="small">긴 <code>/song/UUID</code> 주소나 <code>/embed/UUID</code> 주소를 넣습니다. 카드에서 ‘재생기 열기’를 누르면 해당 곡의 플레이어가 나타납니다. iframe 코드가 있다면 <code>src</code> 주소만 붙여넣으세요.</p></div><div><h3>내 오디오 파일</h3><p class="small"><code>media/P01.mp3</code>처럼 이 HTML 기준의 상대 경로 또는 직접 재생 가능한 오디오 URL을 넣습니다. 카드의 오디오 컨트롤로 재생합니다. 파일을 배포할 때는 오디오 폴더도 함께 전달하세요.</p></div></div><div class="note">수노의 <code>/s/…</code> 주소는 단축 공유 링크입니다. 브라우저에서 열어 <code>/song/…</code> 주소를 확인하거나 수노의 Embed 주소를 사용하세요. 단축 링크만 넣으면 ‘수노에서 듣기’가 표시됩니다. 내장 플레이어는 인터넷과 해당 곡의 접근 권한이 필요하며, 수노에서 임베드를 제한하면 아래 곡 링크로 들을 수 있습니다.</div><p class="small">곡 주소를 비워둔 스타일에는 빈 재생 영역이 표시됩니다. 예시곡은 TRACKS에 연결한 항목부터 들을 수 있습니다. 제작자용 연결 안내는 이 절에 모았습니다.</p></section>
+<section class="section-panel"><h2>비교해서 듣는 작은 실습</h2><p>같은 가사와 S08 구조로 <strong>청량 팝 → 피아노 발라드 → 록 앤섬</strong>을 만듭니다. 후렴의 분위기, 보컬 발음, 드럼의 속도감이 어떻게 바뀌는지 한 문장씩 적어보세요. 이후에는 장르를 고정하고 BPM이나 악기 하나만 바꿔 비교합니다.</p></section>
+<footer class="footer"><p>구조·스타일 예시는 수업용으로 직접 작성했습니다. 장르명과 기본 입력 방식 참고: 아래 수노 공식 자료. 예시곡의 실제 장르·박자·BPM은 듣고 확인하세요.</p><div class="source-links"><a href="https://suno.com/hub/how-to-make-a-song" target="_blank" rel="noopener">수노 공식 곡 제작 안내</a><a href="https://suno.com/music-library/genres" target="_blank" rel="noopener">수노 공식 장르 라이브러리</a><a href="copyright.html">저작권·학생 이용 보조자료</a></div></footer>
+</main><div id="copy-status" class="sr-only" role="status"></div>
+<script>
+(function(){
+'use strict';
+const cards=Array.from(document.querySelectorAll('.style-card'));
+const search=document.getElementById('search');let category='전체';let activeFrame=null;
+function stopEmbed(){if(activeFrame){activeFrame.frame.remove();activeFrame.button.hidden=false;activeFrame=null;}}
+const categories=['전체',...new Set(cards.map(c=>c.dataset.category))];
+for(const cat of categories){const b=document.createElement('button');b.type='button';b.textContent=cat;b.setAttribute('aria-pressed',String(cat===category));b.onclick=()=>{category=cat;document.querySelectorAll('#filters button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));filter();};document.getElementById('filters').append(b);}
+function filter(){const words=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;cards.forEach(c=>{const show=(category==='전체'||c.dataset.category===category)&&words.every(w=>c.dataset.search.includes(w));c.hidden=!show;if(show)count++;else{c.querySelectorAll('audio').forEach(a=>a.pause());if(activeFrame&&c.contains(activeFrame.frame))stopEmbed();}});document.getElementById('results').textContent=count+' / '+cards.length+'개 스타일';document.getElementById('no-results').hidden=count!==0;}
+search.addEventListener('input',filter);filter();
+
+async function copy(t){if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(t);return;}catch(e){}}const a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;opacity:0';document.body.append(a);a.select();const ok=document.execCommand('copy');a.remove();if(!ok)throw Error('copy');}
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{const text=b.parentElement.querySelector('pre').textContent;const label=b.textContent;try{await copy(text);b.textContent='복사됨';document.getElementById('copy-status').textContent='프롬프트가 복사되었습니다.';}catch(e){b.textContent='텍스트를 직접 선택해 복사';}setTimeout(()=>b.textContent=label,1800);});
+let tracks={};try{tracks=JSON.parse(document.getElementById('TRACKS').textContent);}catch(e){document.querySelectorAll('.empty').forEach(p=>p.textContent='TRACKS 형식 확인 필요: 따옴표·쉼표를 확인하세요.');}
+function parseTrack(value){if(!value||!value.trim())return{kind:'empty'};const raw=value.trim();let u;try{u=new URL(raw,location.href);}catch(e){return{kind:'invalid'};}if(!['http:','https:','file:'].includes(u.protocol))return{kind:'invalid'};
+const suno=['suno.com','www.suno.com'].includes(u.hostname);if(suno){if(u.protocol!=='https:')return{kind:'invalid'};const m=u.pathname.match(/^\/(song|embed)\/([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})\/?$/i);if(m)return{kind:'embed',src:'https://suno.com/embed/'+m[2],href:'https://suno.com/song/'+m[2]};if(/^\/s\/[^/]+\/?$/.test(u.pathname))return{kind:'short',href:u.href};return{kind:'invalid'};}
+if(/\.(mp3|wav|ogg|m4a|aac|flac)$/i.test(u.pathname))return{kind:'audio',src:u.href};return{kind:'invalid'};}
+// Exposed for local verification; track URLs are only read from the saved HTML.
+window.sunoDictionary={parseTrack};
+function link(url,text){const a=document.createElement('a');a.href=url;a.textContent=text;a.target='_blank';a.rel='noopener noreferrer';a.className='track-link';return a;}
+document.querySelectorAll('[data-player]').forEach(box=>{const id=box.dataset.player;const record=tracks[id]||{};const track=parseTrack(record.url||'');const label=(record.name||id)+' 예시곡';if(track.kind==='empty')return;
+box.replaceChildren();if(track.kind==='audio'){const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src=track.src;audio.setAttribute('aria-label',label);const hint=document.createElement('p');hint.className='hint';hint.textContent='연결된 예시 오디오';audio.onerror=()=>hint.textContent='오디오를 불러오지 못했습니다. 주소·파일 위치를 확인하세요.';audio.addEventListener('play',()=>{stopEmbed();document.querySelectorAll('audio').forEach(a=>{if(a!==audio)a.pause();});});box.append(audio,hint);return;}
+if(track.kind==='embed'){const b=document.createElement('button');b.type='button';b.className='load-player';b.textContent='▶ 재생기 열기';b.onclick=()=>{document.querySelectorAll('audio').forEach(a=>a.pause());stopEmbed();const frame=document.createElement('iframe');frame.src=track.src;frame.title=label;frame.allow='autoplay; encrypted-media';frame.referrerPolicy='strict-origin-when-cross-origin';box.prepend(frame);b.hidden=true;activeFrame={frame,button:b};};box.append(b,link(track.href,'수노에서 듣기 ↗'));return;}
+if(track.kind==='short'){box.append(link(track.href,'수노에서 듣기 ↗'));const hint=document.createElement('p');hint.className='hint';hint.textContent='내장 재생기를 쓰려면 긴 /song/ 주소 또는 Embed 주소를 연결하세요.';box.append(hint);return;}
+const p=document.createElement('p');p.className='hint';p.textContent='곡 주소를 확인하세요. /song/UUID, /embed/UUID 또는 오디오 파일 경로를 사용합니다.';box.append(p);
+});
+})();
+</script>
+</body></html>
