@@ -8,6 +8,13 @@
 @media(max-width:760px){main{padding:0 14px}header{padding:28px 25px}h1{font-size:32px}.intro-panel,.section-panel{padding:23px 21px}.intro-grid,.patterns{grid-template-columns:1fr}.style-card{grid-template-columns:1fr;padding:22px;gap:12px}.toolbar{padding:12px 16px}.toolbar a{display:none}.listen-panel{width:100%}.section-head{align-items:flex-start}h2{font-size:24px}td{min-width:160px;padding:10px}.style-card h3 span{display:block}}
 @media print{@page{size:A4;margin:15mm}body{background:white;font-size:11pt}.toolbar,nav,.controls,.copybox button,.load-player{display:none!important}main{padding:0;margin:0;max-width:none}header{padding:25px}h1{font-size:28pt}h2{font-size:18pt}.style-card,.pattern{break-inside:avoid}.style-card{grid-template-columns:1fr 220px;gap:15px;padding:18px}.patterns{gap:10px}.intro-panel,.section-panel{padding:18px}.style-card[hidden]{display:grid!important}.player iframe,.player audio{display:none}.player::before{content:'예시곡: 아래 링크로 듣기';font-size:10pt}.source-links{font-size:9pt}a{color:inherit}h2,h3{break-after:avoid}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 </style>
+<style data-source="classroom-navigation">
+.toolbar .classroom-home,.bar .classroom-home{display:inline-flex;align-items:center;flex-shrink:0;gap:6px;padding:8px 12px;border:1px solid #555;border-radius:7px;background:#333;color:#fff;font:600 13px/1.2 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;text-decoration:none;white-space:nowrap}
+.toolbar .classroom-home:hover,.bar .classroom-home:hover{background:#494949}
+.toolbar .classroom-home:focus-visible,.bar .classroom-home:focus-visible{outline:3px solid #7fa7b2;outline-offset:3px}
+@media(max-width:760px){.toolbar .title,.toolbar>strong,.bar>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.toolbar .hint{display:none}}
+@media print{.classroom-home{display:none!important}}
+</style>
 </head>
 <body>
 <!-- =============================================================
@@ -120,7 +127,7 @@ iframe 코드 전체를 넣지 말고 src 주소만 넣으세요.
   }
 }
 </script>
-<div class="toolbar"><strong>수노 기초 · 보조자료</strong><a href="lesson.html">메인 강의</a></div>
+<div class="toolbar"><a class="classroom-home" href="./" aria-label="메인으로 가기">← 메인으로 가기</a><strong>수노 기초 · 보조자료</strong></div>
 <main>
 <header><div class="eyebrow">SUNO · SONG STRUCTURE & STYLE DICTIONARY</div><h1>노래의 흐름을 고르고,<br>소리의 스타일을 들어보기</h1><p>구조는 노래의 순서, 스타일은 노래의 소리입니다.<br>가사 칸에는 구조를, Styles 칸에는 장르·악기·보컬·리듬을 넣어보세요.</p><div class="stats">구조 용어 14개 · 구조 템플릿 8개 · 스타일 24개 · 작성 2026.10.13</div></header>
 <nav aria-label="사전 목차"><a href="#how">사용법</a><a href="#terms">구조 용어</a><a href="#patterns">구조 템플릿</a><a href="#styles">스타일 / 듣기</a><a href="#editing">예시곡 연결</a></nav>
